@@ -1,0 +1,4 @@
+langchain==0.0.266
+librosa==0.10.1
+pydub==0.25.1
+yt-dlp==2023.7.6
