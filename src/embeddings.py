@@ -10,7 +10,7 @@ from langchain.vectorstores import FAISS
 
 def generate_embeddings(
     urls: List[str], data_save_dir: str, api_key: str, index_name: str
-) -> str:
+) -> None:
     try:
         loader = GenericLoader(
             YoutubeAudioLoader(urls, data_save_dir),
@@ -33,6 +33,6 @@ def generate_embeddings(
         vectordb = FAISS.from_texts(splits, embeddings)
 
         vectordb.save_local(folder_path="embeddings", index_name=index_name)
-
+        
     except Exception as e:
         raise e

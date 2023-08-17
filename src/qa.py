@@ -4,9 +4,9 @@ from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
 
 
-def ask_query(query: str, api_key: str, index_name: str) -> str:
+def ask_query(query: str, index_name: str) -> str:
     try:
-        embeddings = OpenAIEmbeddings(openai_api_key=api_key)
+        embeddings = OpenAIEmbeddings()
 
         vectordb = FAISS.load_local(
             folder_path="embeddings", index_name=index_name, embeddings=embeddings
