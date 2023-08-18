@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>User End</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask a Question</title>
 </head>
 <body>
-    <div class="container mt-4">
-        <h1>Hello User!</h1>
-        <form action="/" method="post">
-            <div class="mb-3">
-                <label for="query" class="form-label">Your Question:</label>
-                <input type="text" class="form-control" id="query" name="query" placeholder="Ask your question">
-            </div>
-            <button type="submit" class="btn btn-primary">Ask Query</button>
-        </form>
-    </div>
+    <h1>Ask a Question</h1>
+    <form method="post" action="/query">
+        <label for="query">Question:</label><br>
+        <input type="text" id="query" name="query" required><br><br>
+        
+        <label for="index_name">Index Name:</label><br>
+        <input type="text" id="index_name" name="index_name" required><br><br>
+        
+        <input type="submit" value="Ask">
+    </form>
 </body>
 </html>
